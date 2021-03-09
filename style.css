@@ -1,0 +1,369 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img{
+    display: block;
+    max-width: 100%;  
+}
+
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+:is(h1, h2, h3, h4){
+    color: white;
+    font-family: 'Josefin Sans';
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h1{
+    display: inline-block;
+    border: 2px solid white;
+    padding: 40px;
+    margin-left:  11.19vw;
+    margin-top: 5%;
+    font-size: 72px;
+    line-height: 70px;
+}
+
+h2{
+    font-size: 48px;
+    line-height: 48px;
+    color: black;
+}
+
+h3{
+    border: 1px solid black;
+    padding: 13px 38px;
+    font-family: 'Alata';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+h4{
+    font-size: 32px;
+    line-height: 32px;
+    color: #FFFFFF;
+}
+
+
+p, nav{
+    font-family: 'Alata';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 25px;
+    
+}
+
+p{
+    color: black;
+    opacity: 0.5;
+    margin-top: 25px;
+}
+
+nav{
+    color: white;
+}
+
+
+:is(.section2, .section3, .section4){
+    margin-top: 160px;
+}
+
+/************************************ ACCUEIL ************************************/
+
+.burger{
+    display: none;
+}
+
+.section1{
+    background: url('images/acceuil.png') no-repeat center/cover;
+    height: 650px;
+}
+
+header{
+    padding: 4.20vw 11.19vw;
+}
+
+nav a{
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    margin-right: 32px;
+    position: relative;
+}
+
+a:hover::after{
+    content: '';
+    height: 2px;
+    width: 24px;
+    position: absolute;
+    left:  25%;
+    bottom: -8px;
+    border: 0px;
+    border-bottom: 2px solid white;
+   }
+
+
+/************************************ SECTION 2 ************************************/
+
+.section2{
+    padding-right: 11.19vw;
+    padding-left:  11.9vw;
+}
+
+.containerVR {
+    position: relative;
+}
+
+article{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: white;
+    width: 541px;
+    padding-top: 96px;
+    padding-left: 96px;
+}
+
+/************************************ SECTION 3 ************************************/
+
+.section3{
+    padding-right: 11.19vw;
+    padding-left:  11.9vw;
+}
+
+
+.ourCreation{
+    margin-bottom: 80px;
+}
+
+.containerCreations{
+    border: 4px solid red;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 30px; 
+    margin: auto;
+}
+
+
+.line2{
+    flex-wrap: wrap;
+}
+
+:is(.earth, .arcade, .soccer, .grid, .fisheye, .above, .borealis, .curiosity){
+    position: relative;
+    display: flex;
+    margin: auto;
+}
+
+
+:is(.earth:hover, .arcade:hover, .soccer:hover, .grid:hover, .fisheye:hover, .above:hover, .borealis:hover, .curiosity:hover){
+cursor: pointer;
+}
+
+.imgResponsive{
+    display: none;
+}
+
+
+h4{
+    position: absolute;
+    /* left: 40px; */
+    left: 2.38vw;
+    bottom: 1.90vw;
+    color:white;
+}
+
+h3:hover{
+color: white;
+background: black;
+cursor: pointer;
+}
+
+
+
+/************************************ SECTION 4 ************************************/
+footer{
+    background: #000000;}
+
+.section4{
+    padding: 44px 11.9vw;
+      
+}
+
+.reseauxSociaux{
+    gap: 16px;
+}
+
+.paraFooter{
+        color: #FFFFFF;
+        mix-blend-mode: normal;
+        opacity: 0.5;
+}
+
+
+
+
+
+
+
+
+
+/************************************ MEDIA QUERIES************************************/
+
+@media (max-width: 1190px){
+     /************************************ SECTION 2 ************************************/
+
+.section2{
+    padding-right: auto;
+    padding-left: auto;
+}
+
+.containerVR {
+    border: 4px solid red;
+    position: static;
+    flex-direction: column;
+   justify-content: center;
+}
+
+article{
+    position: static;
+    right: none;
+    bottom: none;
+    background: white;
+    width: 75%;
+    padding-top: 50px;
+    padding-left: 0px;
+}
+
+    /************************************ SECTION 3 ************************************/
+
+
+.containerCreations{
+    grid-template-columns: 1fr 1fr ;
+}
+}
+
+/************************************808PX***********************************/
+
+@media (max-width: 808px){
+    /************************************ ACCUEIL ************************************/
+
+    .burger{
+        display: block;
+        cursor: pointer;
+    }
+
+    .burger span{
+        width: 40px;
+        height: 5px;
+        background: white;
+        border-radius: 54px;
+        margin: 6px 0;
+        display: block;  /* span sont des elements de types inline, display block permet de les faire prendre toutes la largeur et de commencer a la ligne */
+    }
+
+    .burger, .logo {
+        padding: 10px;
+        z-index: 20;  /* pour que le logo et le burger passe devant */
+    }
+
+    nav{
+        z-index: 10;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: black;
+        flex-direction: column;
+        justify-content: center !important;
+        transform: translateX(100%);  /* translateX je deplace de 100% de sa taille vers la droite  -- -100% ca irait vers la gauche  - si on met Y ca change l'axe vers le haut ou le bas*/
+        transition: .5s;
+    }
+
+    .menu-open{
+        transform: translateX(0); /* quand je clique mon menu revient en position normal */
+    }
+
+
+    nav a{
+        text-align: left;
+
+ 
+font-size: 24px;
+line-height: 25px;
+margin-top: 24px;
+
+
+font-family: 'Josefin Sans';
+font-weight: 300;
+text-transform: uppercase;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.section1{
+    background: url('images/accueil_mobile.jpg') no-repeat center/cover;
+    height: 650px;
+}
+
+header{
+
+    padding: 4.20vw 11.19vw;
+}
+
+a{
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    margin-right: 32px;
+    position: relative;
+}
+
+
+
+a:hover::after{
+    content: '';
+    height: 2px;
+    width: 24px;
+    position: absolute;
+    left:  25%;
+    bottom: -8px;
+    border: 0px;
+    border-bottom: 2px solid white;
+
+   }
+
+}
