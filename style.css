@@ -9,7 +9,6 @@ img{
     max-width: 100%;  
 }
 
-
 .flex{
     display: flex;
     justify-content: space-between;
@@ -34,7 +33,7 @@ h1{
     padding: 40px;
     margin-left:  11.19vw;
     margin-top: 5%;
-    font-size: 72px;
+    font-size: clamp(40px, 10vh, 72px);
     line-height: 70px;
 }
 
@@ -64,7 +63,7 @@ h4{
 }
 
 
-p, nav{
+p, a{
     font-family: 'Alata';
     font-style: normal;
     font-weight: normal;
@@ -79,8 +78,9 @@ p{
     margin-top: 25px;
 }
 
-nav{
+a{
     color: white;
+    text-decoration: none;
 }
 
 
@@ -89,7 +89,6 @@ nav{
 }
 
 /************************************ ACCUEIL ************************************/
-
 .burger{
     display: none;
 }
@@ -103,13 +102,14 @@ header{
     padding: 4.20vw 11.19vw;
 }
 
-nav a{
+a{
     cursor: pointer;
     color: white;
     text-decoration: none;
     margin-right: 32px;
     position: relative;
 }
+
 
 a:hover::after{
     content: '';
@@ -120,14 +120,46 @@ a:hover::after{
     bottom: -8px;
     border: 0px;
     border-bottom: 2px solid white;
-   }
+}
+
+
+.imgReseaux{
+    cursor: pointer;
+    color: white;
+}
+
+
+.reseauxSociaux a:hover::after{
+
+    left:  0%;
+    bottom: -10px;
+    border: 0px;
+    border-bottom: 2px solid white;
+}
+
+
+.imgReseaux:hover::after{
+    content: '';
+    height: 10px;
+    width: 24px;
+    position: absolute;
+    left:  25%;
+    bottom: -8px;
+    border: 0px;
+    border-bottom: 2px solid white;
+}
+
+
 
 
 /************************************ SECTION 2 ************************************/
-
 .section2{
     padding-right: 11.19vw;
     padding-left:  11.9vw;
+}
+
+.imgResponsiveVR{
+    display: none;
 }
 
 .containerVR {
@@ -145,6 +177,10 @@ article{
 }
 
 /************************************ SECTION 3 ************************************/
+
+.seeAllResponsive{
+    display: none
+}
 
 .section3{
     padding-right: 11.19vw;
@@ -178,12 +214,21 @@ article{
 }
 
 
+.earth:hover{
+    background-color: black;
+}
+
 :is(.earth:hover, .arcade:hover, .soccer:hover, .grid:hover, .fisheye:hover, .above:hover, .borealis:hover, .curiosity:hover){
 cursor: pointer;
+background-color:blue;
 }
 
 .imgResponsive{
     display: none;
+}
+
+.imgDeskstop:hover{
+background-color: black;
 }
 
 
@@ -204,27 +249,58 @@ cursor: pointer;
 
 
 /************************************ SECTION 4 ************************************/
-footer{
-    background: #000000;}
 
+footer{
+    background: #000000;
+}
 .section4{
     padding: 44px 11.9vw;
-      
+    flex-wrap: wrap;
 }
 
-.reseauxSociaux{
+
+.footerNav{
     gap: 16px;
 }
 
 .paraFooter{
-        color: #FFFFFF;
-        mix-blend-mode: normal;
-        opacity: 0.5;
+    margin-top: 0px;
+     color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.5;
 }
 
 
+/* .reseauxSociaux{
+    border: 4px solid red;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.reseauxSociaux a{
+    justify-content: space-around;
+} */
 
 
+
+.reseauxSociaux{
+    border: 4px solid red;
+    margin-right: 0;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+
+.reseauxSociaux a{
+    margin-right: 0 !important;
+}
+
+
+.logoFooter{
+    margin-bottom: 24px;
+    margin-right: 0px;
+}
 
 
 
@@ -265,10 +341,134 @@ article{
 }
 }
 
+
+/************************************950PX***********************************/
+
+@media (max-width: 950px){
+.footerDeskstop{
+    display: none;
+}
+
+.footerResponsive{
+
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.reseauResponsive{
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.navResponsive {
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 46px;
+}
+
+.loopstudiosFooterResponsive{
+    margin-bottom: 46px;
+}
+
+
+/************************************ SECTION 4 ************************************/
+
+footer{
+    background: #000000;
+}
+.section4{
+    padding: 44px 11.9vw;
+    flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+
+.containerGauche{
+    display: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagesLogo{
+    margin-bottom: 32px;
+}
+
+.footerNav{
+    align-self: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.footerNav a{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    margin-right: 0;
+}
+
+
+a{
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    margin-right: none;
+    position: relative;
+}
+
+.paraFooter{
+    margin-top: 0px;
+     color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
+
+
+.reseauxSociaux{
+    margin-right: 0;
+    justify-content: space-around;
+    margin-bottom: 24px;
+}
+
+
+.reseauxSociaux a{
+    margin-right: 0 !important;
+}
+
+.logoFooter{
+    margin-bottom: 24px;
+}
+
+
+
+
+
+
+
+
+}
+
+
 /************************************808PX***********************************/
 
 @media (max-width: 808px){
     /************************************ ACCUEIL ************************************/
+
+    h1{
+        display: inline-block;
+        border: 2px solid white;
+        padding: 40px;
+        margin-left: 12%;
+        margin-right: auto;
+        margin-top: 10%;
+        /* margin:  auto; */
+    }
 
     .burger{
         display: block;
@@ -276,10 +476,10 @@ article{
     }
 
     .burger span{
-        width: 40px;
-        height: 5px;
+        width: 24px;
+        height: 2px;
         background: white;
-        border-radius: 54px;
+       
         margin: 6px 0;
         display: block;  /* span sont des elements de types inline, display block permet de les faire prendre toutes la largeur et de commencer a la ligne */
     }
@@ -365,5 +565,197 @@ a:hover::after{
     border-bottom: 2px solid white;
 
    }
+
+}
+
+
+
+/************************************700PX***********************************/
+
+@media (max-width: 700px){
+    :is(.section2, .section3, .section4){
+        margin-top: 96px;
+    }
+
+    h1{
+        padding: 24px;
+        font-size: 40px;
+        line-height: 38px;
+        margin-left: 12%;
+        margin-right: auto;
+        margin-top: 20%;
+    }
+
+    h2{
+        font-size: 32px;
+        line-height: 32px;
+        text-align: center;
+    }
+
+    p{
+        text-align: center;
+    }
+
+
+
+
+
+         /************************************ SECTION 2 ************************************/
+
+.section2, .section3{
+    padding-right: 24px;
+    padding-left: 24px;
+}
+
+.containerVR {
+    border: 4px solid red;
+    width: 100%;
+    position: static;
+    flex-direction: column;
+   justify-content: center;
+}
+
+article{
+    position: static;
+    right: none;
+    bottom: none;
+    background: white;
+    width: 75%;
+    padding-top: 50px;
+    padding-left: 0px;
+}
+
+}
+
+/************************************500PX***********************************/
+
+@media (max-width: 500px){
+
+    h1{
+        font-size: 40px;
+        line-height: 38px;
+        margin-left: 12%;
+        margin-right: auto;
+        margin-top: 30%;
+    }
+
+
+   header{
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+
+     /************************************ SECTION 3 ************************************/
+
+
+    .ourCreation h2{
+        text-align: center;
+        margin-right: 0px;
+    }
+
+
+    .seeAllResponsive{
+        align-self: center;
+        text-align: center;
+        display: inline-block;
+        padding: 13px 10px;
+        font-family: 'Alata';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: 5px;
+    }
+
+
+    .seeAllDeskstop{
+        display: none;
+        visibility: hidden;
+    }
+
+
+.section3{
+    padding-right: 24px;
+    padding-left: 24px;
+}
+
+
+.ourCreation{
+    justify-content: center;
+    text-align: center;
+    border: 4px solid blue;
+    margin-bottom: 80px;
+}
+
+.containerCreations{
+    border: 4px solid red;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: none;
+    grid-template-rows: none;
+    gap: 24px; 
+}
+
+
+.imgDeskstop{
+    display: none;
+}
+
+
+.line2{
+    flex-wrap: wrap;
+}
+
+:is(.earth, .arcade, .soccer, .grid, .fisheye, .above, .borealis, .curiosity){
+    width: 100%;
+    position: relative;
+    display: flex;
+    margin: auto;
+}
+
+
+:is(.earth:hover, .arcade:hover, .soccer:hover, .grid:hover, .fisheye:hover, .above:hover, .borealis:hover, .curiosity:hover){
+cursor: pointer;
+}
+
+.imgResponsive{
+    display: block;
+    width: 100%;
+}
+
+
+h4{
+    position: absolute;
+    /* left: 40px; */
+    left: 2.38vw;
+    bottom: 1.90vw;
+    color:white;
+}
+
+h3:hover{
+color: white;
+background: black;
+cursor: pointer;
+}
+
+}
+
+/************************************400PX***********************************/
+
+@media (max-width: 400px){
+    h1{
+        align-self: center;
+        font-size: 40px;
+        line-height: 38px;
+        margin:  auto;
+        margin-top: 35%;
+    }
+
+    .titre{
+        display: flex;
+        align-self: center;
+        width: 100%;
+    }
 
 }

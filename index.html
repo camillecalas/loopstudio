@@ -32,7 +32,9 @@
               <span></span>
             </div>
         </header>
+        <div class="titre">
         <h1>Immersive<br>experiences <br>that deliver</h1>
+    </div>
     </section>
 
 
@@ -42,7 +44,7 @@
 
         <div class="containerVR flex">
             <img src="images/vr.jpg" alt="man with a virtual reality helmet">
-            <img src="images/vr_mobile.jpg" alt="man with a virtual reality helmet" class="imgResponsive">
+            <img src="images/vr_mobile.jpg" alt="man with a virtual reality helmet" class="imgResponsiveVR">
             <article>
                 <h2>The leader in <br> interactive VR</h2>
                 <p>Founded in 2011, Loopstudios has been producing world-class virtual reality projects for some of the best companies around the globe. Our award-winning creations have transformed businesses through digital experiences that bind to their brand.</p>
@@ -53,7 +55,7 @@
     <section class="section3">
         <div class="ourCreation flex">
             <h2>OUR CREATIONS</h2>
-            <h3>SEE ALL</h3>
+            <h3 class=seeAllDeskstop>SEE ALL</h3>
         </div>  
 
         <div class="containerCreations flex">
@@ -105,37 +107,44 @@
                 <img src="images/fisheyes.jpg" alt=""class="imgDeskstop">
                 <img src="images/fisheye_mobile.png" alt=""class="imgResponsive">
             </div>
-
+            <h3 class="seeAllResponsive">SEE ALL</h3>
         </div>
+
+   
 
     </section>
 
     <!------------------------------------ SECTION 4 ------------------------------------>
-    <footer>
-        <section class="section4">
-            <div class="reseau flex">
-                <img src="images/logo.png" alt="loopstudios Logo">
-                <div class="reseauxSociaux flex">
-                <img src="images/facebook_logo.png" alt="">
-                <img src="images/twitter_logo.png" alt="">
-                <img src="images/pinterest_logo.png" alt="">
-                <img src="images/instagram_logo.png" alt="">
-                </div>
-            </div>
 
-            <div class="footerNav flex">
-                <nav>
+    <footer >
+
+       <section class="section4 flex">
+            <div class="containerGauche column">
+                <div class="imagesLogo">
+                  <img src="images/logo.png" alt="logo de la marque loopstudios" class="logoFooter">
+                </div>
+                <div class="footerNav flex">
                     <a href="#About">About</a>
                     <a href="#Careers">Careers</a>
                     <a href="#Events">Events</a>
-                    <a href="Products"> Products</a>
+                    <a href="Products">Products</a>
                     <a href="#Support">Support</a>
-                </nav>
+                </div>
+            </div>
+
+            <div class="ContainerDroite column">
+                <div class="reseauxSociaux flex">
+                    <a href=""><img src="images/facebook_logo.png" alt="logo Facebook"></a>
+                   <a href=""><img src="images/twitter_logo.png" alt="logo Twitter"></a> 
+                    <a href=""><img src="images/pinterest_logo.png" alt="logo Pinterest"></a>
+                   <a href=""> <img src="images/instagram_logo.png" alt="logo Instagram"></a>
+                </div>
                 <p class="paraFooter">© 2021 Loopstudios. All rights reserved.</p>
             </div>
         </section>
 
     </footer>
+
 
     <script src="main.js"></script>
 </body>
