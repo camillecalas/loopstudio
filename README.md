@@ -1,6 +1,6 @@
-# loopstudio
+# loopstudio (Front only)
 
 ## Brief
-- Chalenge project from frontendmentor.io
+- Challenge project from frontendmentor.io
 
 https://camillecalas.github.io/loopstudio/
