@@ -1,4 +1,4 @@
-# loopstudio (Front only)
+# Loopstudio (Front only)
 
 ## Brief
 - Challenge project from frontendmentor.io
